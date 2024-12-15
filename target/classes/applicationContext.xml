@@ -7,6 +7,9 @@
     <bean name="speakerRepository" class="com.xdlab.repository.StubSpeakerRepository" />
 
     <bean name="speakerService" class="com.xdlab.service.SpeakerService">
-        <property name="speakerRepository" ref="speakerRepository" />
+        <constructor-arg index="0" name="speakerRepository" ref="speakerRepository" />
+        <!--index how many arguments this constructor has-->
+        <!--<property name="speakerRepository" ref="speakerRepository" />-->
+        <!--setSpeakerRepository runs-->
     </bean>
 </beans>

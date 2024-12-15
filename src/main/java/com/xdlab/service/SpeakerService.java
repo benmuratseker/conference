@@ -9,6 +9,10 @@ public class SpeakerService implements ISpeakerService {
 
     private ISpeakerRepository repository;
 
+    public SpeakerService(ISpeakerRepository repository) {
+        this.repository = repository;
+    }
+
     @Override
     public List<Speaker> findAll(){
         return repository.findAll();
