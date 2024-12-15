@@ -6,8 +6,11 @@
 
     <bean name="speakerRepository" class="com.xdlab.repository.StubSpeakerRepository" />
 
-    <bean name="speakerService" class="com.xdlab.service.SpeakerService">
-        <constructor-arg index="0" name="speakerRepository" ref="speakerRepository" />
+    <!--<bean name="speakerService" class="com.xdlab.service.SpeakerService" autowire="constructor">-->
+    <!--if we add no argument constructor bytype do the same autowire-->
+    <bean name="speakerService" class="com.xdlab.service.SpeakerService" autowire="byType">
+        <!--autowire assigned above with autowire keyword-->
+        <!--<constructor-arg index="0" name="speakerRepository" ref="speakerRepository" />-->
         <!--index how many arguments this constructor has-->
         <!--<property name="speakerRepository" ref="speakerRepository" />-->
         <!--setSpeakerRepository runs-->

@@ -9,6 +9,9 @@ public class SpeakerService implements ISpeakerService {
 
     private ISpeakerRepository repository;
 
+    public SpeakerService() {
+    }
+
     public SpeakerService(ISpeakerRepository repository) {
         this.repository = repository;
     }
