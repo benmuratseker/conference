@@ -1,2 +1,2 @@
 # conference
-spring mvc
+spring console
